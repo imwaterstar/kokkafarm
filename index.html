@@ -1,195 +1,396 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/chinese.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>日本留学</title>
-<!-- InstanceEndEditable -->
-<style type="text/css">
-body,td,th {
-	color: #000;
-}
-body {
-	background-color: #FF6;
-}
-#apDiv1 {
-	position:absolute;
-	width:116px;
-	height:261px;
-	z-index:1;
-	left: 11px;
-	top: 151px;
-}
-#apDiv5 {
-	position:absolute;
-	width:698px;
-	height:115px;
-	z-index:5;
-	left: 162px;
-	top: 20px;
-}
-#apDiv6 {	position:absolute;
-	width:518px;
-	height:106px;
-	z-index:6;
-	left: 362px;
-	top: 36px;
-	color: #F00;
-	font-weight: bold;
-	font-size: xx-large;
-}
-#apDiv2 {
-	position:absolute;
-	width:718px;
-	height:969px;
-	z-index:7;
-	left: 163px;
-	top: 157px;
-}
-#apDiv3 {
-	position:absolute;
-	width:116px;
-	height:198px;
-	z-index:1;
-	left: 2px;
-	top: 769px;
-}
-#apDiv4 {
-	position:absolute;
-	width:133px;
-	height:194px;
-	z-index:8;
-	left: 4px;
-	top: 470px;
-}
-#apDiv7 {position:absolute;
-	width:116px;
-	height:198px;
-	z-index:1;
-	left: -1px;
-	top: 138px;
-}
-#apDiv8 {
-	position:absolute;
-	width:118px;
-	height:104px;
-	z-index:8;
-	left: 915px;
-	top: 15px;
-	background-color: #FFFF33;
-	color: #F00;
-}
-</style>
-<!-- InstanceBeginEditable name="head" -->
-<style type="text/css">
-#apDiv3 {
-	position:absolute;
-	width:703px;
-	height:1118px;
-	z-index:8;
-	background-color: #FFFFFF;
-}
-#apDiv4 {
-	position:absolute;
-	width:706px;
-	height:115px;
-	z-index:8;
-	background-color: #FFFFFF;
-	left: 1px;
-	top: 677px;
-}
-#apDiv8 {
-	position:absolute;
-	width:118px;
-	height:104px;
-	z-index:8;
-	left: 915px;
-	top: 15px;
-	background-color: #FFFF33;
-	color: #F00;
-}
-h1,h2,h3,h4,h5,h6 {
-	font-family: "日本留学";
-}
-#abc {
-	font-weight: bold;
-}
-</style>
-<!-- InstanceEndEditable -->
+  <meta charset="UTF-8">
+  <title>株式会社コッカファーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* ===== 全局基础（放大1.5倍核心） ===== */
+    html {
+      /* 将根字体设为 150%，使所有使用 rem 的单位等比例放大 1.5 倍 */
+      font-size: 150%; 
+    }
+
+    body {
+      margin: 0;
+      padding-top: 96px; /* 导航栏变高了（64px * 1.5 = 96px），主内容区域置顶距离也需对应 */
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: #222;
+      line-height: 1.8;
+      background: #fff;
+    }
+
+    h2 {
+      font-size: 1.375rem; /* 22px * 1.5 = 33px */
+      margin: 0 0 1rem;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 0.9375rem; /* 15px * 1.5 = 22.5px */
+      max-width: 720px;
+      margin: 0;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 20px;
+    }
+
+    .section-tight {
+      padding: 2.5rem 20px;
+    }
+
+    /* ===== Header（导航栏） ===== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 96px; /* 64px * 1.5 = 96px */
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 0.9375rem; /* 15px * 1.5 = 22.5px */
+      letter-spacing: 0.12em;
+      font-weight: 600;
+    }
+
+    .nav a {
+      margin-left: 24px;
+      font-size: 0.875rem; /* 14px * 1.5 = 21px */
+      color: #222;
+      text-decoration: none;
+    }
+
+    .nav span {
+      margin-left: 24px;
+      font-size: 1.125rem; /* 18px * 1.5 = 27px */
+    }
+
+    /* ===== 卡片 ===== */
+    .card {
+      background: #f8f8f8;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .card-image {
+      height: 420px; /* 适度微调图片高度 */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-body {
+      padding: 3rem 3rem; /* 调整内边距适应 1.5 倍字体 */
+    }
+
+    /* ===== Hero（大图） ===== */
+    .hero {
+      max-width: none;
+      padding-top: 32px;
+      padding-bottom: 48px;
+    }
+
+    .hero-card {
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 32px;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      height: 68vh;
+      background-image: url("images/01_hero_field.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* ===== 取引先 ===== */
+    .partners ul {
+      padding-left: 32px;
+      margin: 1rem 0;
+    }
+
+    .partners li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9375rem; 
+    }
+
+    .contact p {
+      margin: 10px 0;
+    }
+
+    /* ===== 问询表单 ===== */
+    .contact-form {
+      margin-top: 24px;
+      max-width: 720px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem; /* 14px * 1.5 = 21px */
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .badge-required {
+      background: #e05353;
+      color: #fff;
+      font-size: 0.6875rem; /* 11px * 1.5 = 16.5px */
+      padding: 3px 8px;
+      border-radius: 5px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .form-control {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 18px;
+      font-size: 0.9375rem; /* 15px * 1.5 = 22.5px */
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #222;
+    }
+
+    textarea.form-control {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      margin: 40px auto 0;
+      padding: 18px 36px;
+      font-size: 1rem; /* 16px * 1.5 = 24px */
+      font-weight: 600;
+      color: #fff;
+      background-color: #222;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      text-align: center;
+    }
+
+    .btn-submit:hover {
+      background-color: #444;
+    }
+
+    .btn-submit:active {
+      transform: scale(0.98);
+    }
+
+    /* ===== 手机端自适应 ===== */
+    @media (max-width: 768px) {
+      html {
+        font-size: 130%; /* 手机端等比缩减为大 1.3 倍，保证单手握持时阅读体验最好 */
+      }
+      
+      body {
+        padding-top: 80px;
+      }
+
+      .site-header {
+        height: 80px;
+      }
+
+      section {
+        padding: 2.5rem 20px;
+      }
+
+      .card-body {
+        padding: 2rem;
+      }
+
+      .card-image {
+        height: 280px;
+      }
+
+      .nav a {
+        display: none;
+      }
+
+      .btn-submit {
+        max-width: none;
+      }
+    }
+  </style>
 </head>
 
-<body>
-<div id="apDiv1">
-  <p><a href="index.html">留学信息</a></p>
-  <p><a href="chinesesetup.html">投资信息</a></p>
-  <p><a href="chinesefood.html">日本概况</a></p>
-  <p><a href="tertioenglish.html">Tertio英语课</a></p>
-  <p><a href="chineseprogram.html">我们在日本</a></p>
-  <p><a href="chinesedrive.html">驾照攻略</a></p>
-  <p><a href="chineseaddr.html">联系我们</a></p>
-</div>
-<div id="apDiv5">
-  <div align="left"><img src="chinesetop.jpg" alt="" width="701" height="113" />  </div>
-</div>
-<div id="apDiv6">
-  <p>放&nbsp;飞&nbsp;梦&nbsp;想&nbsp;拥&nbsp;抱&nbsp;未&nbsp;来</p>
-</div>
-<div id="apDiv2">
-  <div align="left"><!-- InstanceBeginEditable name="EditRegion1" -->
+<body id="top">
 
-      <div id="apDiv3">
-      <p align="left">&nbsp;</p>
-      <p id="abc">语言学院申请成功案例：</p>
-      <p>&nbsp;</p>
-<p>胡同学：2008年高中毕业，工作9年，怀着对大学的渴望，希望通过日本的语言学校学习进入日本大</p>
-<p>学，此前只学习了简单的日语。</p>
-<p>案例分析：何同学的问题在于毕业时间太久，年龄偏大，而且高中毕业证也丢失了。她从一月份就</p>
-<p>开始咨询中介公司，由于情况复杂，大多中介公司都说希望渺茫。 最后终于找到一家公司愿意帮她</p>
-<p>申请，但是要求她做一个毕业证，可是她本人希望用正当的方式申请。我们分析了她的情况，咨询</p>
-<p>了若干个学校之后，最后感觉<a href="https://yula.jp/zh/top/">友语言学校</a>的十月份开学课程比较适合。 于是我们先向友语言学院提</p>
-<p>交了申请，但是学校也说由于年龄偏大，也不能保证可以通过如果管理局的审批。然后准备各种资</p>
-<p>料,主要是国内各种证明开具比较麻烦，但是我们还是一一做到真实准确。终于在8月份拿到了入国</p>
-<p>管理局下发的在留资格证明书。而胡同学也顺利的拿到签证，在10月份正式进入日本学校学习。</p>
-<p><img src="id1.jpg" width="305" height="172" /></p>
-    <p>&nbsp;</p>
-    <p>联系我们：</p>
-    <p><img src="weixinid.jpg" width="333" height="392" /></p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">株式会社コッカファーム</div>
+      <nav class="nav">
+        <a href="#top">ホーム</a>
+        <a href="#contact">お問い合わせ</a>
+        <span>☰</span>
+      </nav>
     </div>
-    <p align="left">随着中国的经济发展，更多的国人有机会走出国门，见识一下外面的世界。出国留学，给自己或</p>
-    <p align="left">者孩子一个新的选择。但是很多人对留学的认识不足造成了很多不乐观的后果。国内大多数人考虑</p>
-    <p align="left">出国留学的对象基本就是美国，加拿大，澳大利亚 和英国等欧洲国家。这些国家学费昂贵，学费每</p>
-    <p align="left">年十多万元，在加上租房和生活，一年最少也要三十万元。一方面是因为汇率的原因，另外一方面</p>
-    <p align="left">是这些国家都是靠教育提高财政收入的。尤其是加拿大和澳大利亚，之所以成为发达国家，主要原</p>
-    <p align="left">因是地大物博，而不是工业发达，这些国家的教育业的收入是财政收入的一大部分。换句话说，人</p>
-    <p align="left">家办教育就是赚钱的。美国现在来说，读书留下基本不可能了，读书之后到加拿大找工作的大 </p>
-    <p align="left">有人在，但是在美国读书到加拿大找工作又比不过加拿大学校。 而日本却经常被大家忽略。</p>
-    <p align="left">&nbsp; &nbsp;</p>
-    <p align="left">&nbsp;&nbsp;首先由于历史原因，我们对日本了解的不多，或者说了解的很片面。其次是 语言问题，大家基</p>
-    <p align="left">本都是学英语的，除非是日语专业的，一般很少学日语，对日语就有一种天然的畏惧。再加 上国内</p>
-    <p align="left">教育的原因，心里不自然就有排斥心理。实际上，中国人到日本留学有很多好处。第一，学费比较</p>
-    <p align="left">便宜 ，日本不是依靠教育赚钱的，而是对教育加大投入的。日本现在已经开始推广大学教育免费，</p>
-    <p align="left">当然对外国人还是不一样的。第二，日本生活便利。日本和中国有着相似的饮食习惯，面条、米饭</p>
-    <p align="left">都和国内口味差不多，不像美国，只有汉堡和意大利面吃。日本便利店遍布大街小巷，大型超市都</p>
-    <p align="left">有公交车到达，购物十分便利。美国没有汽车的话，生活真是痛苦,公交车基本一个小时一班。学日语</p>
-    <p align="left">中国人有天然的优势，大多数汉字我们都认识，一般人在语言学校只要学习一年半就可以说出流畅的</p>
-    <p align="left">日语。</p>
-    <p>&nbsp;</p>
-<p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-  <!-- InstanceEndEditable --></div>
-</div>
-<p><img src="logoxiaonew.jpg" width="122" height="122" /></p>
-<div id="apDiv8"> &nbsp;&nbsp;
-  <p>&nbsp;&nbsp;<a href="japanesetop.html">日本語</a>&nbsp; </p>
-  <p>&nbsp;&nbsp;<a href="chinesetop.html">中国语</a></p>
-</div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-image"></div>
+    </div>
+  </section>
+
+  <!-- 公司简介 -->
+  <section class="section-tight">
+    <div class="card">
+      <div class="card-body">
+        <h2>会社概要</h2>
+        <p>
+          広島県安芸高田市にて、環境管理と栽培技術を重視したモリーユ生産を行っています。
+          安定した品質と継続供給を大切にしています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品质 -->
+  <section>
+    <div class="card">
+      <div class="card-image" style="background-image:url('images/02_quality_harvest.jpg');"></div>
+      <div class="card-body">
+        <h2>品質へのこだわり</h2>
+        <p>
+          鮮度を最優先に、日々の管理と適切な収穫タイミングを徹底しています。
+          有機栽培に基づき、化学肥料・農薬は使用していません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 认证 -->
+  <section>
+    <div class="card">
+      <div class="card-image" style="background-image:url('images/03_certification.jpg');"></div>
+      <div class="card-body">
+        <h2>有機認証取得</h2>
+        <p>
+          日本国内の有機認証を取得し、栽培工程の透明性と信頼性を確保しています。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技术 -->
+  <section class="section-tight">
+    <div class="card">
+      <div class="card-body">
+        <h2>栽培技術と安定供給</h2>
+        <p>
+          モリーユは高級食材であり、また栽培が非常に難しいキノコの一種です。当社は5年以上にわたる研究を経て、温度と湿度的调节方法を基本的に把握し、年間を通じた安定生産を実現しています。種菌制作から収穫まで全て国内に行います。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 生育 -->
+  <section>
+    <div class="card">
+      <div class="card-image" style="background-image:url('images/05_growth_status.jpg');"></div>
+      <div class="card-body">
+        <h2>生育状況</h2>
+        <p>日本の唯一の栽培産地である、高級レストランに安定提供します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 取引先 -->
+  <section class="section-tight partners">
+    <div class="card">
+      <div class="card-body">
+        <h2>お取引先</h2>
+        <p>仕入れ・供給のご相談は、まず下記のお取引先へお問い合わせください。</p>
+        <ul>
+          <li><a href="https://nakanoshoro.com/" target="_blank">中野松露</a></li>
+          <li><a href="https://kadowakiyahonpo.com/" target="_blank">門脇屋本舗</a></li>
+        </ul>
+        <p>上記で対応が難しい場合のみ、弊社へご連絡ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系与表单 -->
+  <section id="contact" class="section-tight contact">
+    <div class="card">
+      <div class="card-body">
+        <h2>お問い合わせ</h2>
+        <p>Tel: 0826-45-7005</p>
+        <p>Email: kokkafarm2021@gmail.com</p>
+        
+        <!-- 表单开始 -->
+        <form action="https://formspree.io/f/xvznkklb" method="POST" class="contact-form">
+          
+          <div class="form-group">
+            <label for="company">会社名・団体名</label>
+            <input type="text" id="company" name="company" class="form-control" placeholder="例：株式会社〇〇">
+          </div>
+
+          <div class="form-group">
+            <label for="name">お名前<span class="badge-required">必須</span></label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="例：山田 太郎" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス<span class="badge-required">必須</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="例：example@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="tel">電話番号</label>
+            <input type="tel" id="tel" name="tel" class="form-control" placeholder="例：090-0000-0000">
+          </div>
+
+          <div class="form-group">
+            <label for="message">お問い合わせ内容<span class="badge-required">必須</span></label>
+            <textarea id="message" name="message" class="form-control" placeholder="ご質問やご相談内容をご記入ください。" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">内容を送信する</button>
+
+        </form>
+        <!-- 表单结束 -->
+
+      </div>
+    </div>
+  </section>
+
 </body>
-<!-- InstanceEnd --></html>
+</html>
